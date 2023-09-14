@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+
+:root {
+    /* Cores */
+    --cor-primaria: #ce9797;
+    --cor-secundaria: #f96262;
+    --cor-terciaria: #413a3a;
+    --cor-quarta: Linear, 135deg, from hsl(0, 0%, 100%), to hsl(0, 100%, 98%);
+    --cor-quinta: linear-gradient(135deg,#f8bfbf,#ee8c8c);
+    /* Fontes */
+    --fonte-primaria: 'Josefin Sans', sans-serif;
+}
+
+body {
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: var(--fonte-primaria);
+}
+
+main {
+    width: 100dvw;
+    height: 100dvh;
+}
+
+.main-container {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    width: 100%;
+    height: 100%;
+}
+
+.left-side {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+}
+
+.left-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2em;
+    position: relative;
+    height: 100%;
+}
+
+.logo {
+    position: absolute;
+    top: 10%;
+}
+
+.left-container h2 {
+    font-size: 4em;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 16px;
+}
+
+.left-container h2 span {
+    color: var(--cor-primaria);
+    font-weight: 300;
+}
+
+.left-container p {
+    width: 500px;
+    font-size: 1.2em;
+    color: var(--cor-primaria);
+    line-height: 1.5em;
+}
+
+.email-area {
+    display: flex;
+    align-items: center;
+    width: 500px;
+    height: 50px;
+    border: 1px solid var(--cor-primaria);
+    border-radius: 32px;
+    padding: 0 0 0 2em;
+}
+
+.email-area input {
+    width: 90%;
+    border: none;
+    background-color: #fff;
+    height: 29px;
+    padding: 10px 0;
+    outline: none;
+    color: var(--cor-primaria);
+}
+
+.email-area input::placeholder {
+    color: var(--cor-primaria);
+}
+
+.btn-subscribe {
+    width: 10%;
+    height: 50px;
+    border: none;
+    border-radius: 0 32px 32px 0;
+    cursor: pointer;
+    background: var(--cor-quinta);
+}
+
+.right-side {
+    width: 40%;
+    height: 100%;
+    background-image: url(images/hero-desktop.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media (max-width: 1024px) {
+    .main-container {
+        padding: 4em 0;
+        gap: 2em;
+    }
+
+    .left-side {
+        width: 100%;
+    }
+
+    .left-container {
+        position: static;
+        display: flex;
+        align-items: center;
+        text-align: center;
+    }
+
+    .logo {
+        top: 2em;
+    }
+
+    .left-container h2 {
+        font-size: 2em;
+    }
+
+    .left-container p {
+        width: 80%;
+    }
+
+    .right-side {
+        width: 100%;
+        height: 300px;
+        background-image: url(images/hero-mobile.jpg);
+        background-size: cover;
+    }
+
+    .email-area {
+        width: 80%;
+    }
+}
